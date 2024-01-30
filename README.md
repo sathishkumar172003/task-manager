@@ -11,12 +11,13 @@ How to Use:
   1. Clone the Repo:
      $ git clone git@github.com:sathishkumar172003/task-manager.git
      
-  2. go to the folder dir and run the command
+  2. go to the folder dir and run the command:
       $ npm install
      
   3. create .env file and specify the following info:
        a. MONGO_URI=your_mongo_url
        b. SESSION_SECRET=your_secret_key
      
-  4. http://localhost:5000/
+  4.$ npm start
+  5. http://localhost:5000/
 
