@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#nav-section {
+  background-color: #dcffb7;
+  display: flex;
+  gap: 500px;
+  align-content: center;
+}
+
+#nav-section h1 {
+  font-size: 3rem;
+  padding: 10px;
+  margin-left: 170px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+  color: black;
+}
+
+#nav-section a {
+  text-decoration: none;
+}
+
+#nav-section ul {
+  display: flex;
+  align-self: center;
+}
+
+#nav-section ul li {
+  list-style: none;
+  padding: 0 20px;
+  font-size: 1.3rem;
+  /* color: #ff6868; */
+  color: black;
+}
+
+#main-section {
+  /* background-color: rgb(56, 56, 8); */
+  height: 700px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#main-section .content {
+  margin-top: 50px;
+  float: left;
+}
+
+#main-section .content h1 {
+  font-size: 3.2rem;
+  width: 650px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: justify;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+
+#main-section button {
+  font-size: 2rem;
+  border-radius: 10px;
+  background-color: #dcffb7;
+  padding: 10px;
+}
+
+#main-section img {
+  height: 500px;
+  width: 600px;
+  margin-left: 80px;
+  margin-top: 56px;
+  border-radius: 50px;
+}
+
+.flash-message {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: rgb(249, 120, 120);
+  text-align: center;
+}
+
+.flash-message .message {
+  padding-top: 5px;
+}
+
+.task-form {
+  width: 500px;
+  height: 280px;
+  background-color: #ffbb64;
+  padding: 20px;
+  position: absolute;
+  right: 100px;
+  top: 150px;
+}
+
+.task-form label {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.task-form input {
+  height: 40px;
+  width: 80%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.task-form label[for="status"] {
+  display: inline;
+}
+.task-form select {
+  height: 40px;
+  display: inline-block;
+}
+
+.task-form button {
+  display: block;
+  margin-top: 20px;
+}
+
+.task-form .form-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.task-form .task-add {
+  background-color: #dcffb7;
+}

@@ -1,0 +1,19 @@
+<%- include('../includes/header') %> <%- include('../includes/navbar') %>
+
+<div class="update-section container">
+  <h3>Update Task</h3>
+  <form action="/tasks/task/<%= task._id %>?_method=PUT" method="post">
+    <label for="taskName">Enter task :</label>
+    <input type="text" name="taskName" value="<%= task.taskName %>" />
+
+    <label> Status: </label>
+    <select name="status">
+      <option value="progress" selected>Progress</option>
+      <option value="completed">completed</option>
+    </select>
+
+    <button type="submit" class="btn update-task">Update</button>
+  </form>
+</div>
+
+<%- include('../includes/footer') %>

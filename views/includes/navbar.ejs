@@ -1,0 +1,16 @@
+<div id="nav-section">
+  <a href="/" class="title-link"> <h1>Task Manager</h1></a>
+  <ul>
+    <a href="/"><li>Home</li></a>
+    <% if(req.isAuthenticated()){ %>
+    <a href="/tasks/"><li>My Tasks</li></a>
+    <form action="/auth/logout" method="post">
+      <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+
+    <% } else { %>
+    <a href="/auth/signup"><li>Register</li></a>
+    <a href="/auth/login"><li>Login</li></a>
+    <% } %>
+  </ul>
+</div>

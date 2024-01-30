@@ -1,0 +1,56 @@
+<%- include('../includes/header') %> <%- include('../includes/navbar') %> <%
+if(messages.error){ %>
+<div class="alert alert-danger"><%= messages.error %></div>
+
+<% } %> <% if(logoutMsg.length > 0){ %>
+<div class="alert alert-success"><%= logoutMsg %></div>
+<% } %>
+
+<div class="box">
+  <div class="form">
+    <h1 class="form-title">Login</h1>
+    <form action="/auth/login" method="post">
+      <div class="form-group">
+        <input type="text" class="form-control" name="email" required />
+        <label for="email" class="form-label">Enter your email </label>
+      </div>
+
+      <!-- form control -->
+
+      <div class="form-group">
+        <input type="password" class="form-control" name="pwd" required />
+        <label for="pwd" class="form-label">Enter your password </label>
+      </div>
+
+      <!-- form control -->
+
+      <div class="form-group">
+        <label class="showPwd">
+          <input type="checkbox" id="show" />
+          Show Password</label
+        >
+      </div>
+
+      <!-- form control -->
+
+      <div class="bottom-box">
+        <button>Next</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  showBtn = document.querySelector("#show");
+  pwdField = document.querySelector("input[name='pwd']");
+
+  showBtn.addEventListener("click", (e) => {
+    if (pwdField.type == "password") {
+      pwdField.type = "text";
+    } else if (pwdField.type == "text") {
+      pwdField.type = "password";
+    }
+  });
+</script>
+
+<%-include('../includes/footer') %>

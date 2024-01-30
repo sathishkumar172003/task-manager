@@ -1,0 +1,60 @@
+<%- include('../includes/header') %> <%- include('../includes/navbar') %> <%
+if(updateMsg.length > 0){ %>
+<div class="alert alert-info"><%= updateMsg %></div>
+<% } %>
+
+<div class="task-section">
+  <h1>My tasks :</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody class="tasks-tbody">
+      <% tasks.forEach(task => { %>
+      <tr>
+        <td><%= task.taskName %></td>
+        <td><%= task.status %></td>
+        <td>
+          <a href="/tasks/task/<%= task._id %>">
+            <button class="btn btn-info">
+              <i class="fa-solid fa-pen-to-square"></i></button
+          ></a>
+        </td>
+        <td>
+          <form
+            action="/tasks/task/<%= task._id %>?_method=DELETE"
+            method="post"
+          >
+            <button type="submit" class="btn btn-danger">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <!-- <a href="/tasks/create-task"> <button>Add Task</button> </a> -->
+</div>
+
+<div class="task-form">
+  <form action="/tasks/create-task" method="post">
+    <h1 class="form-title">Add Task</h1>
+    <label> Task Name : </label>
+    <input type="text" name="taskName" />
+
+    <label for="status">Status : </label>
+    <select name="status">
+      <option value="progress" selected>Progress</option>
+      <option value="completed">Completed</option>
+    </select>
+
+    <button type="submit" class="btn task-add">Add</button>
+  </form>
+</div>
+
+<%- include('../includes/footer') %>
